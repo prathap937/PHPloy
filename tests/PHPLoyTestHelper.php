@@ -36,7 +36,7 @@ class PHPLoyTestHelper
     {
         $phployScriptPath = realpath(dirname(__FILE__).'/../phploy.php');
         $output = [];
-        $returnValue = null;
+        $returnValue;
         chdir($this->repository);
         exec("php $phployScriptPath", $output, $returnValue);
         $this->synchronizationResult = $returnValue;
